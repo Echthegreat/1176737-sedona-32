@@ -55,18 +55,8 @@
     <main class="main-index">
       <h1 class="visually-hidden">Туристический городок Седона</h1>
 
-      <div class="index-logo">
-        <div class="logo-photo">
-          <img src="" alt="Фотография горной местности Седоны">
-        </div>
-
-        <div class="logo-text">
-          <img src="" alt="Большой логотип города Седона">
-        </div>
-
-        <div class="logo-divider">
-          <img src="" alt="Разделитель/Не контент">
-        </div>
+      <div class="index-logo-container">
+        <img src="" alt="Большой логотип города Седона">
       </div>
 
       <section class="advantages">
@@ -78,9 +68,15 @@
 
         <ol class="advantages-list">
           <li class="advantages-item">
-            <h3 class="advantages-item-heading">Настоящий городок</h3>
-            <span class="advantages-item-number">— №1 —</span>
-            <p class="advantages-item-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <div class="item-and-photo-1-wrapper">
+              <div class="advantages-item-1-container">
+                <h3 class="advantages-item-heading">Настоящий городок</h3>
+                <span class="advantages-item-number">— №1 —</span>
+                <p class="advantages-item-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
+
+              <img src="" alt="Фотография города Седона">
+            </div>
 
             <ul>
               <li class="advantages-subitem">
@@ -101,9 +97,16 @@
           </li>
 
           <li class="advantages-item">
-            <h3 class="advantages-item-heading">Там есть мост дьявола</h3>
-            <span class="advantages-item-number">— №2 —</span>
-            <p class="advantages-item-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            <div class="item-and-photo-2-wrapper">
+
+              <div class="advantages-item-2-container">
+                <h3 class="advantages-item-heading">Там есть мост дьявола</h3>
+                <span class="advantages-item-number">— №2 —</span>
+                <p class="advantages-item-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              </div>
+
+              <img src="" alt="Мост Дьявола">
+            </div>
           </li>
 
           <li class="advantages-item">
@@ -124,30 +127,20 @@
             <p class="advantages-item-description">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ol>
-
-        <div class="advantages-photo-first">
-          <img src="" alt="Фотография города Седона">
-        </div>
-
-        <div class="advantages-photo-second">
-          <img src="" alt="Мост Дьявола">
-        </div>
       </section>
 
       <section class="search-for-hotels">
-        <a class="button-brown" href="#">
-          <h2>Поиск гостиницы в Седоне</h2>
-        </a>
-
-        <p class="search-for-hotels-heading">Заинтересовались?</p>
+        <p class="search-for-hotels-title">Заинтересовались?</p>
 
         <p class="search-for-hotels-description">Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
-      </section>
-    </main>
 
-    <footer class="page-footer">
+        <h2 class="search-for-hotels-heading">
+          <a class="search-for-hotels-link button-brown" href="#">Поиск гостиницы в Седоне</a>
+        </h2>
+      </section>
+
       <section class="newsletter">
         <h2 class="newsletter-heading">Подпишитесь на рассылку</h2>
 
@@ -160,7 +153,9 @@
           </p>
         </form>
       </section>
+    </main>
 
+    <footer class="page-footer">
       <section class="footer-social">
         <h2 class="visually-hidden">Контакты</h2>
 
