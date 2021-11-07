@@ -150,27 +150,33 @@
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
 
-                <label class="catalog-filter-label">
-                  <input class="catalog-filter-input" type="number" name="min-price" value="0">
-                  <span class="price-label">от</span>
-                </label>
+                <p class="price-field">
+                  <label class="catalog-filter-label">
+                    <input class="catalog-filter-input" type="number" name="min-price" value="0">
+                    <span class="price-label">от</span>
+                  </label>
 
-                <label class="catalog-filter-label">
-                  <input class="catalog-filter-input" type="number" name="max-price" value="9000">
-                  <span class="price-label">до</span>
-                </label>
+                  <label class="catalog-filter-label">
+                    <input class="catalog-filter-input" type="number" name="max-price" value="9000">
+                    <span class="price-label">до</span>
+                  </label>
+                </p>
 
-                <button class="range-toggle toggle-min" type="button">
-                  <span class="visually-hidden">Изменить минимальную цену</span>
-                </button>
+                <div class="buttons-price">
+                  <button class="range-toggle toggle-min" type="button">
+                    <span class="visually-hidden">Изменить минимальную цену</span>
+                  </button>
 
-                <button class="range-toggle toggle-max" type="button">
-                  <span class="visually-hidden">Изменить максимальную цену</span>
-                </button>
+                  <button class="range-toggle toggle-max" type="button">
+                    <span class="visually-hidden">Изменить максимальную цену</span>
+                  </button>
+                </div>
               </fieldset>
 
-              <button class="button-blue button-submit-catalog-form" type="submit">Применить</button>
-              <button class="button-reset" type="reset">Сбросить</button>
+              <div class="buttons-form">
+                <button class="button-blue button-submit-catalog-form" type="submit">Применить</button>
+                <button class="button-reset" type="reset">Сбросить</button>
+              </div>
             </form>
           </section>
         </header>
@@ -224,12 +230,16 @@
 
           <ul class="hotels-list">
             <li class="hotel-item">
-              <div class="hotel-title-and-image">
+              <div class="hotel-title-and-description">
                 <h3 class="hotel-title">Amara Resort & Spa</h3>
-                <span class="lodging-type">Гостиница</span>
-                <span class="hotel-item-price">От 4000 ₽</span>
-                <a class="button-brown button-hotels-list" href="#">Подробнее</a>
-                <a class="button-blue button-hotels-list" href="#">В избранное</a>
+                <p class="hotel-info">
+                  <span class="lodging-type">Гостиница</span>
+                  <span class="hotel-item-price">От 4000 ₽</span>
+                </p>
+                <div class="buttons-hotels-list-wrapper">
+                  <a class="button-brown button-hotels-list" href="#">Подробнее</a>
+                  <a class="button-blue button-hotels-list" href="#">В избранное</a>
+                </div>
               </div>
 
               <img src="img/catalog/catalog-amara-resort-and-spa.jpg" alt="Гостиница Amara Resort & Spa" width="180" height="120">
@@ -243,12 +253,16 @@
             </li>
 
             <li class="hotel-item">
-              <div class="hotel-title-and-image">
+              <div class="hotel-title-and-description">
                 <h3 class="hotel-title">Desert Quail Inn</h3>
-                <span class="lodging-type">Мотель</span>
-                <span class="hotel-item-price">От 3000 ₽</span>
-                <a class="button-brown button-hotels-list" href="#">Подробнее</a>
-                <a class="button-blue button-hotels-list" href="#">В избранное</a>
+                <p class="hotel-info">
+                  <span class="lodging-type">Мотель</span>
+                  <span class="hotel-item-price">От 3000 ₽</span>
+                </p>
+                <div class="buttons-hotels-list-wrapper">
+                  <a class="button-brown button-hotels-list" href="#">Подробнее</a>
+                  <a class="button-blue button-hotels-list" href="#">В избранное</a>
+                </div>
               </div>
 
               <img src="img/catalog/catalog-desert-quail-inn.jpg" alt="Мотель Desert Quail Inn" width="180" height="120">
@@ -262,12 +276,16 @@
             </li>
 
             <li class="hotel-item">
-              <div class="hotel-title-and-image">
+              <div class="hotel-title-and-description">
                 <h3 class="hotel-title">Villas at Poco Diablo</h3>
-                <span class="lodging-type">Апартаменты</span>
-                <span class="hotel-item-price">От 2000 ₽</span>
-                <a class="button-brown button-hotels-list" href="#">Подробнее</a>
-                <a class="button-green button-hotels-list" href="#">В избранном</a>
+                <p class="hotel-info">
+                  <span class="lodging-type">Апартаменты</span>
+                  <span class="hotel-item-price">От 2000 ₽</span>
+                </p>
+                <div class="buttons-hotels-list-wrapper">
+                  <a class="button-brown button-hotels-list" href="#">Подробнее</a>
+                  <a class="button-green button-hotels-list" href="#">В избранном</a>
+                </div>
               </div>
 
               <img src="img/catalog/catalog-villas-at-poco-diablo.jpg" alt="Апартаменты Villas at Poco Diablo" width="180" height="120">
@@ -281,12 +299,16 @@
             </li>
 
             <li class="hotel-item">
-              <div class="hotel-title-and-image">
+              <div class="hotel-title-and-description">
                 <h3 class="hotel-title">GreenTree Inn</h3>
-                <span class="lodging-type">Гостиница</span>
-                <span class="hotel-item-price">От 3000 ₽</span>
-                <a class="button-brown button-hotels-list" href="#">Подробнее</a>
-                <a class="button-blue button-hotels-list" href="#">В избранное</a>
+                <p class="hotel-info">
+                  <span class="lodging-type">Гостиница</span>
+                  <span class="hotel-item-price">От 3000 ₽</span>
+                </p>
+                <div class="buttons-hotels-list-wrapper">
+                  <a class="button-brown button-hotels-list" href="#">Подробнее</a>
+                  <a class="button-blue button-hotels-list" href="#">В избранное</a>
+                </div>
               </div>
 
               <img src="img/catalog/catalog-greentree-inn.jpg" alt="Гостиница GreenTree Inn" width="180" height="120">
