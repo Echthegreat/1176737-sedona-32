@@ -118,8 +118,12 @@ html {
   list-style: none;
 }
 
-.navigation-item:not(:last-child) {
+.navigation-item {
   margin-right: 33px;
+}
+
+.navigation-item:last-child {
+  margin-right: 0;
 }
 
 .navigation-link {
