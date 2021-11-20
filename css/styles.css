@@ -417,10 +417,11 @@ html {
 }
 
 .newsletter-email-field {
-  display: flex;
+  width: 800px;
+  display: grid;
+  grid-template-columns: 1fr auto;
   padding: 0;
   margin: 0 auto;
-  margin-left: 200px;
 }
 
 .newsletter-email-field input[type="email"] {
@@ -440,8 +441,9 @@ html {
 }
 
 .newsletter-email-field button[type="submit"] {
+  width: 200px;
   margin: 0;
-  padding: 17px;
+  padding: 17px 35px;
   border-radius: 0 10px 10px 0;
   font-size: 20px;
   line-height: 26px;
