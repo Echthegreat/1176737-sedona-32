@@ -591,17 +591,12 @@ html {
 
 .filters-form {
   display: flex;
-  justify-content: space-between;
-  width: 1060px;
-  min-height: 143px;
-  margin: 0;
 }
 
 .catalog-filter-group {
   margin: 0;
   margin-right: 67px;
   padding: 0;
-  width: 25%;
   border: none;
 }
 
@@ -625,6 +620,11 @@ html {
 
 .control-label {
   line-height: 23px;
+}
+
+.price-group {
+  margin-left: 100px;
+  margin-right: 81px;
 }
 
 .price-field {
@@ -701,12 +701,9 @@ html {
 }
 
 .buttons-form {
-  margin-top: 60px;
-  height: 87px;
+  margin-top: 55px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .button-submit-catalog-form {
@@ -728,6 +725,10 @@ html {
   border-style: none;
   color: #ffffff;
   cursor: pointer;
+}
+
+.buttons-form button + button {
+  margin-top: 24px;
 }
 
 /* Amount Of Hotels And Sorting Type */
