@@ -158,13 +158,14 @@ html {
 }
 
 .navigation-user .navigation-link {
+  position: relative;
   padding: 20px 10px;
 }
 
 .favorites-number {
   position: absolute;
   top: 12px;
-  right: 291px;
+  right: -2px;
   width: 19px;
   height: 19px;
   padding-top: 0.4px;
