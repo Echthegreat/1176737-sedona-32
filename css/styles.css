@@ -2,8 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: local("PT Sans"),
-    url("fonts/ptsans-400.woff2");
+  src: url("../fonts/ptsans-400.woff2");
   font-display: swap;
 }
 
@@ -11,8 +10,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: local("PT Sans Bold"),
-    url("fonts/ptsans-700.woff2");
+  src: url("../fonts/ptsans-700.woff2");
   font-display: swap;
 }
 
@@ -145,7 +143,8 @@ html {
 .navigation-logo {
   position: absolute;
   width: 138px;
-  margin-left: 460px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navigation-user {
@@ -160,6 +159,27 @@ html {
 
 .navigation-user .navigation-link {
   padding: 20px 10px;
+}
+
+.favorites-number {
+  position: absolute;
+  top: 12px;
+  right: 291px;
+  width: 19px;
+  height: 19px;
+  padding-top: 0.4px;
+  display: flex;
+  border-radius: 50%;
+  background-color: #7db54f;
+}
+
+.favorites-number span {
+  margin: 0 auto;
+  align-self: center;
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #ffffff;
 }
 
 .navigation-item > .button-brown {
@@ -190,8 +210,7 @@ html {
   padding-top: 1px;
   margin-bottom: 63px;
   background: url("../img/index/index-divider-for-background.svg") center bottom no-repeat,
-    url("../img/index/index-background-for-logo.jpg") repeat-y;
-  background-color: #f4d03f;
+    #b5c1c7 url("../img/index/index-background-for-logo.jpg") repeat-y;
 }
 
 .index-logo-container img {
@@ -270,7 +289,7 @@ html {
 
 .advantages-item-heading,
 .advantages-subitem-heading {
-  width: 170px;
+  width: 171px;
   margin: 98px auto 25px;
   font-weight: 700;
   font-size: 24px;
@@ -374,7 +393,7 @@ html {
   min-height: 411px;
   padding-top: 92px;
   padding-bottom: 91px;
-  background: #f4d03f url("../img/index/newsletter-background.jpg") repeat-y;
+  background: #b5c1c7 url("../img/index/newsletter-background.jpg") repeat-y;
   color: #ffffff;
   text-align: center;
   line-height: 26px;
@@ -485,9 +504,10 @@ html {
 
 .phone-container {
   position: absolute;
-  width: 332px;
+  min-width: 360px;
   margin-top: 3px;
-  margin-left: 360px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .phone-number a {
@@ -517,8 +537,7 @@ html {
   flex-direction: column;
   min-height: 408px;
   padding: 35px 73px;
-  background: url("../img/catalog/main-catalog-header-background.jpg") repeat-y;
-  background-color: #f4d03f;
+  background: #b5c1c7 url("../img/catalog/main-catalog-header-background.jpg") repeat-y;
   color: #ffffff;
 }
 
@@ -574,7 +593,7 @@ html {
   display: flex;
   justify-content: space-between;
   width: 1060px;
-  height: 145px;
+  min-height: 143px;
   margin: 0;
 }
 
@@ -587,6 +606,7 @@ html {
 }
 
 .catalog-filter-title {
+  margin: 0;
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 20px;
@@ -607,16 +627,8 @@ html {
   line-height: 23px;
 }
 
-.catalog-filter-group:nth-child(3) {
-  width: 287px;
-  height: 144px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .price-field {
-  margin: 4px 0 10px;
+  margin: 0;
   display: flex;
   width: 287px;
   height: 48px;
@@ -646,13 +658,13 @@ html {
 }
 
 .buttons-price {
-  width: 100%;
+  width: 287px;
+  margin-top: 32px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .buttons-price-range {
-  margin-top: 32px;
   width: 287px;
   height: 4px;
   background-color: #ffffff;
@@ -726,7 +738,7 @@ html {
 }
 
 .amount-of-hotels p {
-  min-width: 337px;
+  min-width: 390px;
   margin: 0;
   padding: 0;
   font-weight: 700;
@@ -737,7 +749,7 @@ html {
 }
 
 .sorting-type-container {
-  margin-left: 192px;
+  margin-left: 139px;
   width: 287px;
   height: 48px;
 }
@@ -848,13 +860,13 @@ html {
   line-height: 23px;
 }
 
-.buttons-hotel-list-wrapper {
+.buttons-hotels-list-wrapper {
   display: flex;
   min-width: 320px;
 }
 
 .button-hotels-list {
-  width: 151px;
+  min-width: 151px;
   padding: 10px 30px;
   border-radius: 4px;
   font-size: 16px;
@@ -950,7 +962,7 @@ html {
 }
 
 .items-on-page-form {
-  width: 391px;
+  min-width: 440px;
   margin-left: auto;
   display: flex;
   justify-content: flex-end;
@@ -967,6 +979,4 @@ html {
   width: 160px;
   margin: 0;
   padding: 13px 17px 12px;
-}
-
 }
