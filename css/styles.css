@@ -56,8 +56,37 @@ img {
   background-color: #756257;
 }
 
+.button-brown:hover {
+  background-color: #615048;
+}
+
+.button-brown:focus {
+  background-color: #615048;
+  outline: 3px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.button-brown:active,
+.navigation-link.button-brown:active {
+  color: #ffffff4d;
+}
+
 .button-blue {
   background-color: #83b3d3;
+}
+
+.button-blue:hover {
+  background-color: #68a2ca;
+}
+
+.button-blue:focus {
+  background-color: #68a2ca;
+  outline: 3px solid #756257;
+}
+
+.button-blue:active {
+  background-color: #68a2ca;
+  color: #ffffff4d;
 }
 
 .button-green {
@@ -99,6 +128,7 @@ html {
   padding: 0 72px 0 71px;
   color: #000000;
   z-index: 1;
+  position: relative;
 }
 
 .navigation {
@@ -135,9 +165,30 @@ html {
   text-decoration: none;
 }
 
+.navigation-link:hover {
+  color: #756257;
+  fill: #756257;
+}
+
+.navigation-link:focus {
+  color: #756257;
+  fill: #756257;
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+}
+
+.navigation-link:active {
+  color: #7562574d;
+  fill: #7562574d;
+}
+
 .page-current {
   padding-bottom: 18px;
   border-bottom: 2px solid #756257;
+}
+
+.page-current:hover {
+  color: #000000;
 }
 
 .navigation-logo {
@@ -441,6 +492,19 @@ html {
   border-radius: 10px 0 0 10px;
 }
 
+.newsletter-email-field input[type="email"]:hover {
+  background-color: #e6e6e6;
+}
+
+.newsletter-email-field input[type="email"]:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.newsletter-email-field input[type="email"]:active {
+  background-color: #ffffff;
+  outline: 2px solid #00000033;
+}
+
 .newsletter-email-field button[type="submit"] {
   width: 200px;
   margin: 0;
@@ -449,6 +513,7 @@ html {
   font-size: 20px;
   line-height: 26px;
 }
+
 /* Overflow fix */
 .subscribe-form > p + p {
   margin-top: 26px;
@@ -471,6 +536,7 @@ html {
   width: 1200px;
   min-height: 120px;
   padding: 40px 72px;
+  position: relative;
 }
 
 .footer-social {
@@ -503,6 +569,21 @@ html {
 
 .footer-socials-item a {
   padding: 15px;
+  fill: #83b3d3;
+}
+
+.footer-socials-item a:hover {
+  fill: #68a2ca;
+}
+
+.footer-socials-item a:focus {
+  fill: #68a2ca;
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+}
+
+.footer-socials-item a:active {
+  fill: #68a2ca4d;
 }
 
 .phone-container {
@@ -523,6 +604,20 @@ html {
   text-decoration: none;
 }
 
+.phone-number a:hover {
+  color: #756257;
+}
+
+.phone-number a:focus {
+  color: #756257;
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+}
+
+.phone-number a:active {
+  color: #7562574d;
+}
+
 .copyright {
   margin-top: 2px;
   margin-left: auto;
@@ -533,6 +628,21 @@ html {
   width: 115px;
   height: 34px;
 }
+
+.copyright a:hover {
+  fill: #756257;
+}
+
+.copyright a:focus {
+  fill: #756257;
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+}
+
+.copyright a:active {
+  fill: #7562574d;
+}
+
 
 /* Header of Catalog Main*/
 .main-catalog-header {
