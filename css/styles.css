@@ -1415,7 +1415,7 @@ input[name="max-price"] + .price-label {
 .buttons-hotels-list-wrapper {
   margin-left: -1px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   min-width: 330px;
 }
