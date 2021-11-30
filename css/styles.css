@@ -567,12 +567,15 @@ html {
 }
 
 .newsletter-email-field input[type="email"]:focus {
+  background-color: #e6e6e6;
   outline: 3px solid #83b3d3;
+  border-radius: 10px 0 0 10px;
 }
 
-.newsletter-email-field input[type="email"]:focus-within {
+.newsletter-email-field input[type="email"]:active {
   background-color: #ffffff;
   outline: 2px solid #000000;
+  border-radius: 10px 0 0 10px;
   z-index: 1;
 }
 
@@ -1673,10 +1676,10 @@ input[name="max-price"] + .price-label {
   display: none;
   position: fixed;
   margin: 0 auto;
-  top: 30px;
+  top: 5vh;
   width: 715px;
-  height: 561px;
-  padding: 60px 40px 70px 68px;
+  min-height: 561px;
+  padding: 61px 40px 64px 67px;
   background-color: #ffffff;
   color: #000000;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
@@ -1690,7 +1693,7 @@ input[name="max-price"] + .price-label {
 .modal-content {
   position: relative;
   width: 575px;
-  height: 437px;
+  min-height: 437px;
 }
 
 .modal-title {
@@ -1743,14 +1746,6 @@ input[name="max-price"] + .price-label {
   margin-bottom: 7px;
 }
 
-.modal-field-group:nth-child(1) .modal-description {
-  color: #ff5757;
-}
-
-.modal-field-group:last-of-type {
-  margin-bottom: 40px;
-}
-
 .modal-field-group:not(:last-of-type)::after {
   position: absolute;
   top: 18px;
@@ -1761,7 +1756,12 @@ input[name="max-price"] + .price-label {
   background: url("../img/popup/popup-calendar-icon.svg");
 }
 
-.modal-field-group:nth-child(1) .modal-label {
+.modal-field-group:last-of-type {
+  margin-bottom: 40px;
+}
+
+.modal-field-group .modal-label {
+  margin-left: 2px;
   margin-right: 55px;
 }
 
@@ -1769,29 +1769,18 @@ input[name="max-price"] + .price-label {
   margin-right: 49px;
 }
 
-.modal-field-group .modal-description {
-  margin-top: -7px;
-  margin-left: 157px;
-  font-weight: normal;
-  font-size: 16px;
-}
-
-.modal-label {
-  margin-left: 2px;
-}
-
 .modal-field {
   width: 420px;
   height: 50px;
-  padding: 15px 20px 16px;
+  padding: 13px 20px 16px;
   background: #f2f2f2;
   color: #00000099;
   border: none;
   border-radius: 4px;
+  font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 40px;
-  letter-spacing: -1px;
 }
 
 .modal-field:hover {
@@ -1804,35 +1793,114 @@ input[name="max-price"] + .price-label {
   border-radius: 4px;
 }
 
-.modal-field:focus-within {
+.modal-field:active {
   background-color: #ffffff;
   outline: 2px solid #000000;
   border-radius: 4px;
   color: #000000;
 }
 
+.modal-field-group .modal-description {
+  margin-top: -7px;
+  margin-left: 157px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.modal-error {
+  color: #ff5757;
+}
+
+.modal-success {
+  color: #333333;
+}
+
+.modal-field-group-small {
+  display: flex;
+  align-items: center;
+}
+
 .modal-field-group-small:nth-child(1) {
   width: 288px;
-  display: flex;
+  margin-right: 22px;
 }
 
 .modal-field-group-small:nth-child(2) {
   width: 266px;
-  display: flex;
-  align-items: center;
 }
 
 .modal-field-small {
   width: 133px;
   height: 50px;
-  padding: 18px 55px 19px 61px;
+  padding: 18px 32px 19px 32px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 40px;
   font-weight: bold;
+  text-align: center;
   background: #f2f2f2;
   border: none;
   border-radius: 4px;
+}
+
+.input-and-inc-dec-buttons {
+  position: relative;
+}
+
+.modal-field-group-small:first-child > .modal-label {
+  margin-right: 74px;
+}
+
+.modal-field-group-small:nth-child(2) > .modal-label {
+  margin-left: 36px;
+  margin-right: 11px;
+}
+
+.modal-field-group-small:nth-child(2) > .form-tip {
+  margin-top: 2px;
+  margin-right: 18px;
+}
+
+.decrease-amount {
+  position: absolute;
+  padding-bottom: 24px;
+  padding-right: 24px;
+  width: 16px;
+  height: 10px;
+  top: 12px;
+  left: 10px;
+  background: transparent;
+  border: none;
+}
+
+.increase-amount {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 6px;
+  right: 12px;
+  padding-top: 12px;
+  padding-bottom: 24px;
+  padding-right: 20px;
+  background: transparent;
+  border: none;
+}
+
+.decrease-amount:hover svg,
+.increase-amount:hover svg {
+  fill: #000000;
+}
+
+.decrease-amount:focus,
+.increase-amount:focus {
+  fill: #000000;
+  outline: 3px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.decrease-amount:active svg,
+.increase-amount:active svg {
+  fill: #00000033;
 }
 
 .form-tip {
@@ -1854,13 +1922,14 @@ input[name="max-price"] + .price-label {
 .form-tip:hover + .form-tip-text {
   display: block;
   position: absolute;
-  padding: 15px 18px 18px 22px;
+  padding: 19px 18px 24px 22px;
   background: #333333;
   color: #ffffff;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  top: 40px;
-  width: 216px;
+  top: 38px;
+  right: 37px;
+  width: 256px;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
@@ -1871,58 +1940,17 @@ input[name="max-price"] + .price-label {
   display: block;
   position: absolute;
   content: "";
-  top: -4px;
-  left: 93px;
-  width: 15px;
+  top: -9px;
+  left: 118px;
+  width: 19px;
   height: 15px;
   background: url("../img/popup/popup-triangle-message-top.svg");
-}
-
-.input-and-inc-dec-buttons {
-  position: relative;
-}
-
-.decrease-amount {
-  position: absolute;
-  padding-bottom: 20px;
-  padding-right: 19px;
-  width: 16px;
-  height: 10px;
-  top: 12px;
-  left: 10px;
-  border: none;
-}
-
-.increase-amount {
-  position: absolute;
-  width: 13px;
-  height: 13px;
-  top: 17px;
-  right: 25px;
-  border: none;
-}
-
-.decrease-amount:hover svg,
-.increase-amount:hover svg {
-  fill: #000000;
-}
-
-.decrease-amount:focus,
-.increase-amount:focus {
-  fill: #000000;
-  outline: 3px solid #83b3d3;
-  border-radius: 4px;
-}
-
-.decrease-amount:active svg,
-.increase-amount:active svg {
-  fill: #00000033;
 }
 
 .modal-submit-button {
   width: 575px;
   margin-left: 2px;
-  padding: 15px 255px 19px;
+  padding: 16px 255px 18px;
   padding-left: 252px;
   padding-right: 252px;
   font-weight: bold;
@@ -1932,47 +1960,28 @@ input[name="max-price"] + .price-label {
   text-transform: uppercase;
   border: none;
   border-radius: 10px;
-  letter-spacing: -1px;
 }
-
-.modal-field-group-small:first-child {
-  margin-right: 22px;
-  align-items: center;
-}
-
-.modal-field-group-small:first-child > .modal-label {
-  margin-right: 74px;
-}
-
-.modal-field-group-small:nth-child(2) > .modal-label {
-  margin-left: 36px;
-  margin-right: 11px;
-}
-
-.modal-field-group-small:nth-child(2) > .form-tip {
-  margin-top: 2px;
-  margin-right: 18px;
-}
-
 
 /* Favorites */
 .favorites-popover {
   display: none;
   position: absolute;
-  right: 69px;
+  top: 62px;
+  right: 72px;
   width: 400px;
-  height: 232px;
-  padding-top: 25px;
-  padding-right: 25px;
-  padding-bottom: 0;
-  padding-left: 25px;
+  min-height: 232px;
   background: #ffffff;
   border: 1px solid #e6e6e6;
+  border-bottom: none;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   font-weight: bold;
   font-size: 18px;
   line-height: 40px;
+}
+
+.favorites-button:focus-within .favorites-popover {
+  display: block;
 }
 
 .favorites-popover::before {
@@ -1981,22 +1990,25 @@ input[name="max-price"] + .price-label {
   display: block;
   background: url("../img/favorites/favorites-top-triangle.svg");
   top: -10px;
-  left: 184px;
+  left: 187px;
   width: 20px;
   height: 10px;
 }
 
-
 .favorites-list {
-  position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+  padding-top: 24px;
+  padding-right: 25px;
+  padding-bottom: 0;
+  padding-left: 24px;
   list-style: none;
   margin: 0;
-  padding: 0;
 }
 
-.favorites-item:not(:last-child) {
+.favorites-item {
+  position: relative;
   margin-bottom: 20px;
 }
 
@@ -2006,6 +2018,10 @@ input[name="max-price"] + .price-label {
   color: #000000;
 }
 
+.favorites-link:focus {
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+}
 
 .favorites-link img {
   display: block;
@@ -2026,57 +2042,46 @@ input[name="max-price"] + .price-label {
   font-size: 16px;
   color: #333333;
   font-weight: normal;
-  font-size: 16px;
   line-height: 40px;
 }
 
-.favorites-item button {
+.favorites-delete {
+  position: absolute;
+  right: -11px;
+  top: -3px;
+  padding: 10px;
+  background: transparent;
   border: none;
+  cursor: pointer;
 }
 
-.favorites-item svg:hover {
+.favorites-delete svg {
+  fill: #00000033;
+}
+
+.favorites-delete:hover svg {
   fill: #000000;
 }
 
-.favorites-item svg:focus {
-  fill: #000000;
-  outline: : 3px solid #83b3d3;
+.favorites-delete:focus {
+  outline: 3px solid #83b3d3;
   border-radius: 10px;
 }
 
-.favorites-item svg:active {
-  fill: #0000004d;
+.favorites-delete:active svg {
+  fill: #0000001a;
 }
-
-.favorites-item:nth-child(1) button {
-  display: block;
-  position: absolute;
-  right: -7px;
-  top: 6px;
-}
-
-.favorites-item:nth-child(2) button {
-  display: block;
-  position: absolute;
-  right: -7px;
-  top: 79px;
-}
-
 
 .all-favorites {
   position: absolute;
-  padding-top: 20px;
-  top: 171px;
-  right: -1px;
-  width: 400px;
-  min-height: 60px;
   display: block;
-  text-decoration: none;
-  font-weight: bold;
+  width: 400px;
+  margin-top: auto;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
   font-size: 16px;
   line-height: 21px;
-  background: #756257;
+  padding: 20px 107px 19px 107px;
   border-radius: 0 0 20px 20px;
-  color: #ffffff;
-  text-align: center;
 }
