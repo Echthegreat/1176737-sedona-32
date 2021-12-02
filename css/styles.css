@@ -673,10 +673,10 @@ html {
 }
 
 .phone-container {
-  position: absolute;
+  position: relative;
   min-width: 360px;
   margin-top: -1px;
-  margin-left: 15px;
+  margin-left: -102px;
   left: 50%;
   transform: translateX(-50%);
 }
