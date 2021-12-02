@@ -2035,9 +2035,17 @@ input[name="max-price"] + .price-label {
   color: #000000;
 }
 
+.favorites-link:hover {
+  opacity: 0.6;
+}
+
 .favorites-link:focus {
   outline: 3px solid #83b3d3;
   border-radius: 10px;
+}
+
+.favorites-link:active {
+  opacity: 0.3;
 }
 
 .favorites-link img {
