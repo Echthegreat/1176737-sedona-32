@@ -278,6 +278,10 @@ html {
 }
 
 .favorites-number span {
+  display: block;
+  max-width: 18px;
+  max-height: 18px;
+  overflow: hidden;
   margin: 0 auto;
   align-self: center;
   font-size: 10px;
@@ -1012,6 +1016,10 @@ html {
 
 .price-label {
   position: relative;
+  display: block;
+  max-width: 32px;
+  max-height: 32px;
+  overflow: hidden;
   line-height: 23px;
   color: #ffffff;
   opacity: 0.3;
@@ -1704,7 +1712,7 @@ input[name="max-price"] + .price-label {
   line-height: 40px;
   font-weight: bold;
   border-radius: 30px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .modal-content {
@@ -1999,6 +2007,7 @@ input[name="max-price"] + .price-label {
 
 .favorites-button:focus-within .favorites-popover {
   display: block;
+  z-index: 2;
 }
 
 .favorites-popover::before {
